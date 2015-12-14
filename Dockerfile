@@ -5,6 +5,9 @@ RUN chmod 755 /build.sh
 RUN /build.sh
 RUN rm build.sh
 
+#Die a bit faster:
+ENV S6_KILL_GRACETIME=500
+
 COPY keygen.sh /etc/cont-init.d/keygen
 RUN chmod 755 /etc/cont-init.d/keygen
 
