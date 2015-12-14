@@ -8,14 +8,9 @@ Alternatively pass in your key via the AUTHORIZED_KEY env variable.
 
 ## Usage Example
 
-```
-docker run --rm -it -p 2222:22 -v ~/my_ssh_keys:/root/.ssh/ gaff/alpine-sshd
-```
+    docker run --rm -it -p 2222:22 -v ~/my_ssh_keys:/root/.ssh/ gaff/alpine-sshd
 
-```
-docker run --rm -it -p 2222:22 -e AUTHORIZED_KEY="`cat id_rsa.pub`" gaff/alpine-sshd
-```
-
+    docker run --rm -it -p 2222:22 -e AUTHORIZED_KEY="`cat id_rsa.pub`" gaff/alpine-sshd
 
 [s6]: http://www.skarnet.org/software/s6/
 [s6-overlay]: https://github.com/just-containers/s6-overlay
