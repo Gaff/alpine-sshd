@@ -13,4 +13,4 @@ EXPOSE 22
 #-D = don't detach
 #-e = output to stderr
 #-f = config file
-CMD [ "/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_configtail"]
+CMD [ "/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_config"]
