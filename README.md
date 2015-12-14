@@ -1,6 +1,4 @@
 # alpine-sshd
 A dockerised sshd server build upon alpine baseimage
 
-I'm going to use atom to edit this.
-
-Touching for build?
+Hopefully this will automagically build into dockerhub; yay :)
