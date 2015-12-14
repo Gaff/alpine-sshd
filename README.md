@@ -4,11 +4,16 @@ Minimal Alpine Linux Docker container with `sshd` exposed and `rsync` installed.
 the image will correctly log, handle errors, and do other things that you'd expect a base image to be capable of.
 
 Mount your .ssh credentials at `/root/.ssh/` in order to access the container via root ssh.
+Alternatively pass in your key via the AUTHORIZED_KEY env variable.
 
 ## Usage Example
 
 ```
-docker run --rm -it -p 2222:22 gaff/alpine-sshd
+docker run --rm -it -p 2222:22 -v ~/my_ssh_keys:/root/.ssh/ gaff/alpine-sshd
+```
+
+```
+docker run --rm -it -p 2222:22 -e AUTHORIZED_KEY="`cat authorized_keys`" gaff/alpine-sshd
 ```
 
 
