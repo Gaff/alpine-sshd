@@ -18,3 +18,8 @@ if [ -d ~/.ssh ] && [ -w ~/.ssh ]; then
       chmod 600 ~/.ssh/*
     fi
 fi
+
+# Allow a key to be passed in via env
+if [ -n "$AUTHORIZED_KEY" ]; then
+    echo "$AUTHORIZED_KEY" >> /authorized_keys
+fi
